@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Velvet Vault — a heist game</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #0b0b12; color: #e8e0c8;
+    font-family: Georgia, 'Times New Roman', serif; }
+  body { display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+  h1 { margin: 14px 0 2px; font-size: 26px; letter-spacing: 2px; color: #d8b45a; }
+  .sub { color: #9a8f74; font-size: 13px; margin-bottom: 10px; font-style: italic; }
+  #wrap { position: relative; }
+  canvas { display: block; border: 2px solid #6b5a2e; border-radius: 6px;
+    background: #14141f; box-shadow: 0 0 40px rgba(216, 180, 90, 0.15); }
+  .help { max-width: 960px; margin: 12px 16px 24px; font-size: 14px; line-height: 1.55; color: #c9bfa4; }
+  .help b { color: #e8d28a; }
+  kbd { background: #2a2a3a; border: 1px solid #555; border-radius: 4px; padding: 1px 6px;
+    font-family: monospace; font-size: 12px; color: #fff; }
+</style>
+</head>
+<body>
+<h1>THE VELVET VAULT</h1>
+<div class="sub">A quiet heist in three rooms &mdash; steal the Starlit Muse and slip out the green door.</div>
+<div id="wrap"><canvas id="game" width="960" height="640"></canvas></div>
+<div class="help">
+  <b>Move</b> <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or arrow keys &nbsp;·&nbsp;
+  <b>Throw a coin</b> left-click (costs 1 coin &mdash; guards walk over to investigate) &nbsp;·&nbsp;
+  <b>Jammer</b> right-click (costs 2 coins &mdash; freezes the nearest camera for 6 seconds) &nbsp;·&nbsp;
+  <b>Restart room</b> <kbd>R</kbd> &nbsp;·&nbsp; <b>Start / continue</b> <kbd>Enter</kbd><br>
+  Guards and cameras sweep their vision cones. Stay out of the light: being seen raises your
+  <b>alarm</b>. At 100% the vault locks down and the run is over. Grab the glowing loot, then reach
+  the green exit. Walls and crates block sight &mdash; plan your route before you move.
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>
